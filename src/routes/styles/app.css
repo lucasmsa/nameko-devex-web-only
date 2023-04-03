@@ -1,0 +1,29 @@
+@import '@fontsource/fira-mono';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	@font-face {
+		font-family: 'Amplitude Wide';
+		src: local('Amplitude-Wide'), local('amplitude-wide'),
+			url('/fonts/amplitude-wide/Amplitude-wide-regular.otf');
+		font-weight: normal;
+		font-display: swap;
+	}
+	@font-face {
+		font-family: 'Amplitude Wide';
+		src: local('Amplitude-Wide-Medium'), local('amplitude-wide-medium'),
+			url('/fonts/amplitude-wide/amplitudewide-medium.ttf');
+		font-weight: medium;
+		font-display: swap;
+	}
+	@font-face {
+		font-family: 'Amplitude Wide Book';
+		src: local('Amplitude-Wide-Book'), local('amplitude-wide-book'),
+			url('/fonts/amplitude-wide-book/amplitudewide-book.ttf');
+		font-weight: normal;
+		font-display: swap;
+	}
+}
