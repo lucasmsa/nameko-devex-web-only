@@ -6,6 +6,7 @@ export interface LabeledInputProps {
 	icon: string
 	value: string
 	readonly: boolean
+	customContainerClasses: string
 }
 
 interface LabeledInputOption {
