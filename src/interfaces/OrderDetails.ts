@@ -2,7 +2,7 @@ export interface OrderDetails {
 	id: number
 	image: string
 	price: string
-	product_id: number
+	product_id: string
 	quantity: number
 	product: Product
 }

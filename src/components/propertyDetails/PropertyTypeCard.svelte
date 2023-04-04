@@ -1,7 +1,6 @@
 <script lang="ts">
 	import type { PropertyTypeCardProps } from '../../interfaces/PropertyTypeCardProps'
 	export let data: Partial<PropertyTypeCardProps> = {}
-	import { fade } from 'svelte/transition'
 
 	export let { name, icon, selected = false } = data
 

@@ -21,9 +21,9 @@
 	<h1 class="text-5xl font-bold self-center">Order Details</h1>
 	<div class="flex flex-col gap-12">
 		{#each orders as order}
-			<div class="bg-white rounded-lg shadow-lg overflow-hidden">
+			<div class="bg-white rounded-lg shadow-lg">
 				<div
-					class="h-48 w-full bg-darkViolet"
+					class="h-48 w-full bg-darkViolet rounded-t-lg"
 					style="background-image: url({order.image})"
 				/>
 				<div class="p-4">
