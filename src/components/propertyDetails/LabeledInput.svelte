@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { LabeledInputProps } from '../interfaces/LabeledInputProps'
+	import type { LabeledInputProps } from '../../interfaces/LabeledInputProps'
 
 	export let {
 		label,
@@ -37,7 +37,7 @@
 		{#if hasOptions}
 			<select
 				style="appearance: none; background-image: url('/icons/chevron-down-icon.svg'); background-position: right center; background-repeat: no-repeat; padding-right: 2rem;"
-				class="w-full !outline-none text-base font-amplitudeWideBook"
+				class="cursor-pointer w-full !outline-none text-base font-amplitudeWideBook"
 				{value}
 				on:change={handleChange}
 			>

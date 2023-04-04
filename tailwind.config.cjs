@@ -1,6 +1,9 @@
 module.exports = {
 	content: ['./src/**/*.html', './src/**/*.svelte'],
 	theme: {
+		screens: {
+			'md-custom': '870px',
+		},
 		extend: {
 			colors: {
 				darkViolet: '#35344C',

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { writable } from 'svelte/store'
-	import LabeledInput from '../../components/LabeledInput.svelte'
-	import PropertyTypeCard from '../../components/PropertyTypeCard.svelte'
+	import LabeledInput from '../../components/propertyDetails/LabeledInput.svelte'
+	import PropertyTypeCard from '../../components/propertyDetails/PropertyTypeCard.svelte'
 	import {
 		propertyOptions,
 		propertyTypeCards,
@@ -10,12 +10,17 @@
 	const selected = writable(null)
 </script>
 
+<svelte:head>
+	<title>Property Details</title>
+	<meta name="description" content="Property Details" />
+</svelte:head>
+
 <section
 	class="flex flex-col w-full ml-auto mr-auto max-w-[908px] py-[70px] px-8"
 >
 	<section class="flex flex-wrap">
-		<div class="flex">
-			<div class="text-lg flex flex-col gap-3 max-w-[410px]">
+		<div class="flex max-md-custom:flex-col-reverse max-md-custom:gap-10">
+			<div class="text-lg flex flex-col gap-3 md-custom:max-w-[410px]">
 				<h2 class="font-amplitudeWide text-4xl">Property details</h2>
 				<p class="font-amplitudeWideBook text-[18px] tracking-tight">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -31,7 +36,7 @@
 					/>
 				</div>
 			</div>
-			<div class="ml-20">
+			<div class="md-custom:ml-20 max-md-custom:mx-auto">
 				<img
 					class="min-w-[340px] min-h-[220px]"
 					src="/icons/property-icon.svg"
@@ -42,7 +47,7 @@
 	</section>
 	<section class="flex flex-col flex-wrap my-8 gap-2">
 		<p class="text-label">Property Type</p>
-		<div class="flex gap-5">
+		<div class="flex gap-5 max-md-custom:flex-col">
 			{#each propertyTypeCards as { name, icon }, index}
 				<PropertyTypeCard
 					{name}
@@ -60,7 +65,7 @@
 		<div
 			class="flex flex-col gap-[26px] border-[#E5E5E4] border-solid border-[1px] mt-2 rounded shadow-[0_6px_16px_2px_rgb(0,0,0,0.1)] p-6"
 		>
-			<div class="flex gap-6 content-between">
+			<div class="flex gap-6 content-between max-md-custom:flex-col">
 				<LabeledInput placeholder="Name and/or number" label="Unit Name" />
 				<LabeledInput
 					icon="/icons/dollar-icon.svg"
@@ -76,7 +81,7 @@
 				/>
 				<LabeledInput readonly label="Lease Length (months)" value={'12'} />
 			</div>
-			<div class="flex gap-6 content-between">
+			<div class="flex gap-6 content-between max-md-custom:flex-col">
 				<LabeledInput
 					icon="/icons/bed-icon.svg"
 					placeholder="Select"
@@ -105,7 +110,7 @@
 		</div>
 	</section>
 	<section class="mt-16 flex justify-between">
-		<button class="btn-outline">back</button>
-		<button class="btn-primary">continue</button>
+		<a href="/" class="btn-outline">back</a>
+		<a href="/" class="btn-primary">continue</a>
 	</section>
 </section>
