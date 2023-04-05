@@ -2,7 +2,7 @@
 
 ### 📄 Tasks
 
-- [x]  Style and structure the `Property details` page according to this [!Figma mock]([https://www.figma.com/file/DSl3CRb0uW5hyIUNE0rWPK/nameko-devex?node-id=0-1&t=U13RUERzIzCqApR9-0](https://www.figma.com/file/DSl3CRb0uW5hyIUNE0rWPK/nameko-devex?node-id=0-1&t=U13RUERzIzCqApR9-0)) using Tailwindcss
+- [x]  Style and structure the `Property details` page according to this [Figma mock](https://www.figma.com/file/DSl3CRb0uW5hyIUNE0rWPK/nameko-devex?node-id=0-1&t=U13RUERzIzCqApR9-0) using Tailwindcss
 - [x]  Make a GET request to the orders API, retrieving the Order with `id` 1, displaying those details on the page
 
 ### 💢 Troubleshooting

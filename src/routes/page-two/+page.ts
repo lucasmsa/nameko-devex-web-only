@@ -12,6 +12,9 @@ export async function load({ fetch }: LoadEvent) {
 			orderDetails,
 		}
 	} catch (error) {
-		console.error(error)
+		return {
+			status: 500,
+			message: 'Request to API failed',
+		}
 	}
 }

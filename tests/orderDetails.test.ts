@@ -33,4 +33,12 @@ describe('Order Details page', () => {
 			expect(exception).toBeTruthy()
 		}
 	})
+
+	test('should throw an error when OrderDetails does not have any data', async () => {
+		try {
+			render(OrderDetails)
+		} catch (exception) {
+			expect(exception).toBeTruthy()
+		}
+	})
 })
