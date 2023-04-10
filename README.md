@@ -1,5 +1,38 @@
 # 💻 Nameko Devex Web Test w/ SvelteKit
 
+#### The web application made for the test is inside the `gateapi/web` folder
+
+### ⚙️ How to run the application
+```
+Clone the repository
+$ git clone https://github.com/lucasmsa/nameko-devex-web-test
+
+Run the microservices
+$ docker-compose up
+Or run the microservices locally by following these steps:
+$ brew install jq
+$ conda env create -f environment_dev.yml
+$ conda activate nameko-devex
+$ ./dev_run_backingsvcs.sh
+$ ./dev_run.sh gateway.service orders.service products.service
+
+Any doubts about how to run the microservices locally, please refer to the  
+https://github.com/gitricko/nameko-devex/blob/master/README.md (Docker) or
+https://github.com/gitricko/nameko-devex/blob/master/README-DevEnv.md (Local)
+
+# Enter the web application folder
+$ cd gateapi/web
+
+# Install dependencies
+$ npm install
+
+# Run the application
+$ npm run dev
+
+# Run the tests (integration tests) 🧪
+$ npm run test
+```
+
 ### 📄 Tasks
 
 - [x]  Style and structure the `Property details` page according to this [Figma mock](https://www.figma.com/file/DSl3CRb0uW5hyIUNE0rWPK/nameko-devex?node-id=0-1&t=U13RUERzIzCqApR9-0) using Tailwindcss
