@@ -1,7 +1,13 @@
 import OrderDetails from '../src/routes/page-two/+page.svelte'
-import { describe, test, expect } from 'vitest'
+import { describe, test, expect, vi } from 'vitest'
 import { render, screen } from '@testing-library/svelte'
 import { orderBuilder } from './factory/orderBuilder'
+
+const fetch = vi.fn()
+
+function createFetchErroredReponse(data) {
+	return { json: () => new Error('Error fetching data!') }
+}
 
 describe('Order Details page', () => {
 	test('should render the component with order details', async () => {
@@ -26,15 +32,7 @@ describe('Order Details page', () => {
 		expect(quantity).toBeTruthy()
 	})
 
-	test('should display an error message without fetching data', async () => {
-		try {
-			render(OrderDetails)
-		} catch (exception) {
-			expect(exception).toBeTruthy()
-		}
-	})
-
-	test('should throw an error when OrderDetails does not have any data', async () => {
+	test('should throw an error message without fetching data', async () => {
 		try {
 			render(OrderDetails)
 		} catch (exception) {
