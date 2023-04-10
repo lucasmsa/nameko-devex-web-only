@@ -3,6 +3,11 @@
 	import { emojis } from '../emojis'
 </script>
 
+<svelte:head>
+	<title>Error Order Details</title>
+	<meta name="description" content="Error" />
+</svelte:head>
+
 <div
 	class="pt-8 font-amplitudeWide gap-4 items-center justify-center flex mx-auto flex-col"
 >

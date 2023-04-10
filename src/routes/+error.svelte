@@ -1,6 +1,12 @@
 <script>
+	import { svelte } from '@sveltejs/vite-plugin-svelte'
 	import { page } from '$app/stores'
 </script>
+
+<svelte:head>
+	<title>Error page</title>
+	<meta name="description" content="Error" />
+</svelte:head>
 
 <div
 	class="pt-8 font-amplitudeWide text-3xl items-center justify-center flex mx-auto flex-col"
